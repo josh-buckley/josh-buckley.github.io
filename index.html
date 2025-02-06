@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StrikeLab - Download on the App Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -16,8 +19,6 @@
             min-height: 100vh;
             background-color: #1A1A1A;
             color: #ffffff;
-            display: flex;
-            flex-direction: column;
         }
 
         .main-container {
@@ -26,7 +27,7 @@
             padding: 40px 20px;
             display: flex;
             flex-direction: column;
-            flex: 1;
+            min-height: 100vh;
         }
 
         .phones-container {
@@ -60,6 +61,20 @@
             height: auto;
         }
 
+        .strikelab-header {
+            position: absolute;
+            left: 50%;
+            bottom: -80px;
+            transform: translateX(-50%);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 48px;
+            color: #ffffff;
+            text-decoration: line-through;
+            text-decoration-color: #FFD700;
+            text-decoration-thickness: 4px;
+        }
+
         .app-store-button {
             position: absolute;
             left: calc(100% - 165px);
@@ -81,6 +96,7 @@
             text-align: center;
             padding: 20px;
             background-color: #1b1b1b;
+            margin-top: auto;
         }
 
         footer a {
@@ -104,6 +120,11 @@
             .phone {
                 width: 250px;
             }
+
+            .strikelab-header {
+                font-size: 36px;
+                bottom: -60px;
+            }
         }
 
         @media (max-width: 800px) {
@@ -114,6 +135,11 @@
 
             .phone {
                 width: 280px;
+            }
+
+            .strikelab-header {
+                font-size: 32px;
+                bottom: -50px;
             }
         }
     </style>
@@ -130,6 +156,7 @@
             <div class="phone">
                 <img src="assets/phone3.png" alt="StrikeLab Workouts Screen">
             </div>
+            <div class="strikelab-header">strikelab</div>
             <a href="#" class="app-store-button">
                 <img src="assets/download-on-app-store.svg" alt="Download on the App Store">
             </a>
