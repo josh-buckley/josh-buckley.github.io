@@ -14,49 +14,51 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             min-height: 100vh;
+            background-color: #1A1A1A;
+            color: #ffffff;
             display: flex;
             flex-direction: column;
-            background-color: #000000;
-            color: #ffffff;
-            align-items: center;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .phones-container {
+            display: flex;
             justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin: auto;
+            padding: 20px;
         }
 
-        .splash-container {
-            position: relative;
-            width: 90%;          /* Container takes 90% of viewport width */
-            max-width: 1200px;   /* But never gets wider than 1200px */
-            margin: 20px auto;
-            background-color: #000000;
+        .phone {
+            width: 300px;
+            height: auto;
+            filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
+            transition: transform 0.3s ease;
         }
 
-        .splash-wrapper {
-            position: relative;
+        .phone img {
             width: 100%;
-            padding-top: 56.25%; /* For 16:9 aspect ratio. Adjust this based on your image's aspect ratio */
-        }
-
-        .splash-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: contain; /* Changed from cover to contain */
+            height: auto;
         }
 
         .app-store-button {
-            position: absolute;
-            /* We'll position these relative to the actual image dimensions */
-            left: 66%;
-            top: 75%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
             transition: transform 0.2s ease;
         }
 
         .app-store-button:hover {
-            transform: translate(-50%, -50%) scale(1.05);
+            transform: scale(1.05);
         }
 
         .app-store-button img {
@@ -68,9 +70,6 @@
             text-align: center;
             padding: 20px;
             background-color: #1b1b1b;
-            width: 100%;
-            position: relative;
-            z-index: 2;
         }
 
         footer a {
@@ -86,32 +85,50 @@
             text-decoration: underline;
         }
 
-        /* Add responsive adjustments */
-        @media (max-width: 768px) {
-            .splash-container {
-                width: 95%;    /* Take up more width on mobile */
-                margin: 10px auto;
+        @media (max-width: 1000px) {
+            .phones-container {
+                gap: 20px;
             }
 
-            .app-store-button img {
-                height: 40px;  /* Slightly smaller button on mobile */
+            .phone {
+                width: 250px;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .phones-container {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .phone {
+                width: 280px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="splash-container">
-        <div class="splash-wrapper">
-            <img src="assets/splash2.jpg" alt="StrikeLab App" class="splash-image">
-            <a href="#" class="app-store-button">
-                <img src="assets/download-on-app-store.svg" alt="Download on the App Store">
-            </a>
+    <div class="main-container">
+        <div class="phones-container">
+            <div class="phone">
+                <img src="assets/phone1.png" alt="StrikeLab Training Days Screen">
+            </div>
+            <div class="phone">
+                <img src="assets/phone2.png" alt="StrikeLab Main Screen">
+            </div>
+            <div class="phone">
+                <img src="assets/phone3.png" alt="StrikeLab Workouts Screen">
+            </div>
         </div>
-    </div>
 
-    <footer>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
-    </footer>
+        <a href="#" class="app-store-button">
+            <img src="assets/download-on-app-store.svg" alt="Download on the App Store">
+        </a>
+
+        <footer>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </footer>
+    </div>
 </body>
 </html>
