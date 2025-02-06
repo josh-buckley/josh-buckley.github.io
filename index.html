@@ -24,7 +24,7 @@
 
         .splash-container {
             position: relative;
-            width: 100vw;
+            width: 100%;
             height: 100vh;
             overflow: hidden;
         }
@@ -33,22 +33,16 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
         }
 
         .app-store-button {
             position: absolute;
-            /* These values will need to be adjusted to match your image */
-            left: 66vw;    /* Adjust this value */
-            top: 75vh;     /* Adjust this value */
+            /* Adjust these percentages to position the button */
+            left: 66%;    /* Distance from left edge */
+            top: 75%;     /* Distance from top edge */
             transform: translate(-50%, -50%);
             z-index: 2;
             transition: transform 0.2s ease;
-            width: 53px;   /* Set a fixed width */
-            height: 53px;  /* Set a fixed height */
         }
 
         .app-store-button:hover {
@@ -56,9 +50,8 @@
         }
 
         .app-store-button img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+            height: 53px;
+            width: auto;
         }
 
         footer {
