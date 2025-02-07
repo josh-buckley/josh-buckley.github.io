@@ -48,12 +48,19 @@
         }
 
         .phone:first-child {
-            width: 258px;
+            width: 232px;
             transform: translateY(5px);
         }
 
-        .phone:last-child {
-            width: 330px;
+        .phone:nth-child(2) {
+            width: 270px;
+            transform: translateY(0);
+            z-index: 2;
+        }
+
+        .phone:nth-child(3) {
+            width: 297px;
+            transform: translateY(5px);
         }
 
         .phone img {
@@ -64,20 +71,20 @@
         .top-fighter-badge {
             position: absolute;
             left: 190px;
-            bottom: -79px;
+            bottom: -71px;
             transform: translateX(-50%);
-            width: 198px;
+            width: 178px;
             height: auto;
         }
 
         .strikelab-header {
             position: absolute;
             left: 47.8%;
-            bottom: -77px;
+            bottom: -69px;
             transform: translateX(-50%);
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
-            font-size: 48px;
+            font-size: 43px;
             color: #ffffff;
         }
 
@@ -95,9 +102,11 @@
         .app-store-button {
             position: absolute;
             left: calc(100% - 240px);
-            bottom: -69px;  
+            bottom: -62px;
             transform: translateX(-50%);
             transition: transform 0.2s ease;
+            width: 135px;
+            height: auto;
         }
 
         .app-store-button:hover {
