@@ -33,14 +33,17 @@
         .phones-container {
             display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 30px;
-            margin: auto;
-            padding: 20px;
+            align-items: flex-end;
+            gap: 20px;
+            padding-top: 40px;
+            margin-bottom: 100px;
             position: relative;
         }
 
         .phone {
+            position: relative;
+            display: flex;
+            justify-content: center;
             width: 300px;
             height: auto;
             filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
@@ -49,18 +52,18 @@
 
         .phone:first-child {
             width: 232px;
-            transform: translateY(5px);
+            transform: translateY(-40px);
         }
 
         .phone:nth-child(2) {
             width: 270px;
-            transform: translateY(0);
+            transform: translateY(-45px);
             z-index: 2;
         }
 
         .phone:nth-child(3) {
             width: 297px;
-            transform: translateY(5px);
+            transform: translateY(-40px);
         }
 
         .phone img {
